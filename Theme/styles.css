@@ -1,0 +1,231 @@
+/**
+*  Publish Foundation theme
+*  Copyright (c) John Sundell 2019
+*  MIT license, see LICENSE file for details
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    font-family: Helvetica, Arial;
+    text-align: center;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.wrapper-centered {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+header {
+    background-image: none;
+    background-color: #eee;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+header .wrapper {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header .site-name {
+    font-size: 5em;
+    color: #000;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 50px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 7px;
+    line-height: 2em;
+}
+
+nav li a.selected {
+    font-weight: bold;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: inherit;
+}
+
+.description {
+    margin-bottom: 40px;
+}
+
+.iso-list {
+    list-style-type: none;
+    display:inline-table;
+}
+
+.iso-list > li {
+    display: inline;
+    padding: 20px;
+}
+
+.clients-list {
+    list-style-type: none;
+    display: inline-table;
+}
+
+.clients-list > li {
+    display: inline-block;
+    margin: 20px;
+}
+
+.clients-list img:hover {
+  transform: scale(1.01, 1.01);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+  filter: none;
+}
+
+.clients-list img {
+    background-color: #eee;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    filter: grayscale(100%);
+}
+
+
+.project-list > li {
+    display: block;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #eee;
+    margin-bottom: 20px;
+    
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-list > li:hover {
+  transform: scale(1.01, 1.01);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.project-list > li:last-child {
+    margin-bottom: 0;
+}
+
+.project-list h1 {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.project-list p {
+    margin-bottom: 0;
+}
+
+.tag-list {
+    margin-bottom: 15px;
+}
+
+.tag-list li,
+.tag {
+    display: inline-block;
+    background-color: #000;
+    color: #ddd;
+    padding: 4px 6px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.tag-list a,
+.tag a {
+    text-decoration: none;
+}
+
+.item-page .tag-list {
+    display: inline-block;
+}
+
+.content {
+    margin-bottom: 40px;
+}
+
+.browse-all {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.all-tags li {
+    font-size: 1.4em;
+    margin-right: 10px;
+    padding: 6px 10px;
+}
+
+footer {
+    color: #8a8a8a;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+    }
+
+    body,
+    header .site-name {
+        color: #ddd;
+    }
+
+    .project-list > li {
+        background-color: #333;
+    }
+
+    header {
+        background-image: url(images/sudor.jpg);
+    }
+}
+
+@media(max-width: 600px) {
+    .wrapper {
+        padding: 40px 20px;
+    }
+}
