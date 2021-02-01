@@ -4,6 +4,24 @@
 *  MIT license, see LICENSE file for details
 */
 
+:root {
+  --accent-color: #386641;
+  --background-color: #edf2ef;
+  --card-background-color: #e7eeea;
+  --tag-background-color: #64994e;
+  --text-color: #424242;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #545e56;
+    --background-color: #292f36;
+    --card-background-color: #23282f;
+    --tag-background-color: #667761;
+    --text-color: #ebf5ee;
+  }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,8 +29,8 @@
 }
 
 body {
-    background: #fff;
-    color: #000;
+    background: var(--background-color);
+    color: var(--text-color);
     font-family: Helvetica, Arial;
     text-align: center;
 }
@@ -26,6 +44,12 @@ body {
     overflow: hidden;
 }
 
+@media(max-width: 600px) {
+    .wrapper {
+        padding: 40px 20px;
+    }
+}
+
 .wrapper-centered {
     max-width: 900px;
     margin-left: auto;
@@ -37,13 +61,17 @@ body {
 
 
 header {
-    background-image: none;
-    background-color: #eee;
+    background-color: var(--accent-color);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
 
+@media (prefers-color-scheme: dark) {
+    header {
+        background-image:url(images/sudor.jpg)
+    }
 }
 
 header .wrapper {
@@ -58,7 +86,7 @@ header a {
 
 header .site-name {
     font-size: 5em;
-    color: #000;
+    color: var(--background-color);
     font-weight: bold;
 }
 
@@ -70,10 +98,12 @@ nav li {
     display: inline-block;
     margin: 0 7px;
     line-height: 2em;
+    color: var(--background-color);
 }
 
 nav li a.selected {
     font-weight: bold;
+    color: var(--text-color);
 }
 
 h1 {
@@ -99,7 +129,7 @@ a {
 
 .iso-list {
     list-style-type: none;
-    display:inline-table;
+    display: inline-table;
 }
 
 .iso-list > li {
@@ -130,6 +160,7 @@ a {
     border-radius: 30px;
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
     filter: grayscale(100%);
+    background-color: var(--card-background-color);
 }
 
 
@@ -137,7 +168,7 @@ a {
     display: block;
     padding: 20px;
     border-radius: 20px;
-    background-color: #eee;
+    background-color: var(--card-background-color);
     margin-bottom: 20px;
     
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -169,8 +200,8 @@ a {
 .tag-list li,
 .tag {
     display: inline-block;
-    background-color: #000;
-    color: #ddd;
+    background-color: var(--tag-background-color);
+    color: var(--text-color);
     padding: 4px 6px;
     border-radius: 5px;
     margin-right: 5px;
@@ -200,31 +231,53 @@ a {
     padding: 6px 10px;
 }
 
+section h2::before {
+  display: inline-block;
+  content: "";
+  width: 2rem;
+  height: 0.25rem;
+  margin-right: 1rem;
+  transform: translateY(-0.4rem);
+  background-color: var(--accent-color);
+}
+
+.subsection {
+  border-bottom: 6px dotted var(--accent-color);
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.subsection > p {
+  margin-left: 200px;
+}
+
+.subsection > ul {
+    margin-left: 200px;
+    list-style-type: square;
+}
+
+.subsection li {
+    padding: 10px;
+}
+
+.subsection li::marker {
+    color: var(--accent-color);
+}
+
+.subsection h4 {
+  margin-left: 200px;
+  padding: 10px;
+}
+
+.subsection img {
+  height: 300px;
+  width: auto;
+  border-radius: 30px;
+  border: 6px dotted var(--accent-color);
+}
+
+
 footer {
-    color: #8a8a8a;
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #222;
-    }
-
-    body,
-    header .site-name {
-        color: #ddd;
-    }
-
-    .project-list > li {
-        background-color: #333;
-    }
-
-    header {
-        background-image: url(images/sudor.jpg);
-    }
-}
-
-@media(max-width: 600px) {
-    .wrapper {
-        padding: 40px 20px;
-    }
+    background-color: var(--card-background-color);
+    color: var(--accent-color);
 }
