@@ -282,24 +282,7 @@ footer {
     color: var(--accent-color);
 }
 
-.leftImg {
-    display: inline-block;
-    float: left;
-    padding-top: 180px;
-}
-
-.leftImg img {
-    width: 165px;
-    height: 165px;
-}
-
-.rightImg {
-    display: inline-block;
-    float: right;
-    padding: 128px 10px;
-}
-
-.rightImg img {
-    width: 34px;
-    height: 34px;
+iframe {
+    display: block;
+    margin: auto;
 }
