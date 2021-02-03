@@ -5,21 +5,31 @@
 */
 
 :root {
-  --accent-color: #386641;
+  --accent-color: #84a98c;
   --background-color: #edf2ef;
-  --card-background-color: #e7eeea;
-  --tag-background-color: #64994e;
+  --card-background-color: #d8e2dc;
+  --tag-background-color: #52796f;
   --text-color: #424242;
+  --about-data-margin: 200px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent-color: #545e56;
+    --accent-color: #3a5a40;
     --background-color: #292f36;
     --card-background-color: #23282f;
-    --tag-background-color: #667761;
-    --text-color: #ebf5ee;
+    --tag-background-color: #344e41;
+    --text-color: #dad7cd;
   }
+}
+
+@media (max-width: 660px) {
+    :root {
+        --about-data-margin: 20px;
+    }
+    .wrapper {
+        padding: 40px 20px;
+    }
 }
 
 * {
@@ -44,12 +54,6 @@ body {
     overflow: hidden;
 }
 
-@media(max-width: 600px) {
-    .wrapper {
-        padding: 40px 20px;
-    }
-}
-
 .wrapper-centered {
     max-width: 900px;
     margin-left: auto;
@@ -63,20 +67,15 @@ body {
 header {
     background-color: var(--accent-color);
     background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
-}
-
-@media (prefers-color-scheme: dark) {
-    header {
-        background-image:url(images/sudor.jpg)
-    }
+    background-image:url(images/headerPattern.png);
+    background-size: 256px 128px;
+    background-repeat: repeat;
 }
 
 header .wrapper {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 118px;
+    padding-bottom: 54px;
     text-align: center;
 }
 
@@ -86,12 +85,13 @@ header a {
 
 header .site-name {
     font-size: 5em;
-    color: var(--background-color);
     font-weight: bold;
+    background-color: var(--accent-color);
+    color: var(--text-color);
 }
 
 nav {
-    margin-top: 50px;
+    margin-top: 38px;
 }
 
 nav li {
@@ -248,11 +248,11 @@ section h2::before {
 }
 
 .subsection > p {
-  margin-left: 200px;
+  margin-left: var(--about-data-margin);
 }
 
 .subsection > ul {
-    margin-left: 200px;
+    margin-left: var(--about-data-margin);
     list-style-type: square;
 }
 
@@ -265,7 +265,7 @@ section h2::before {
 }
 
 .subsection h4 {
-  margin-left: 200px;
+  margin-left: var(--about-data-margin);
   padding: 10px;
 }
 
@@ -280,4 +280,26 @@ section h2::before {
 footer {
     background-color: var(--card-background-color);
     color: var(--accent-color);
+}
+
+.leftImg {
+    display: inline-block;
+    float: left;
+    padding-top: 180px;
+}
+
+.leftImg img {
+    width: 165px;
+    height: 165px;
+}
+
+.rightImg {
+    display: inline-block;
+    float: right;
+    padding: 128px 10px;
+}
+
+.rightImg img {
+    width: 34px;
+    height: 34px;
 }
