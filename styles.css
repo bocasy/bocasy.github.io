@@ -90,20 +90,32 @@ header .site-name {
     color: var(--text-color);
 }
 
-nav {
+header nav {
     margin-top: 38px;
-}
-
-nav li {
-    display: inline-block;
-    margin: 0 7px;
     line-height: 2em;
-    color: var(--background-color);
+    display: inline-block;
+    background-color: var(--text-color);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-nav li a.selected {
+header nav li {
     font-weight: bold;
+    display: inline-block;
+    color: var(--accent-color);
+}
+
+header nav li.selected {
+    font-weight: bold;
+    display: inline-block;
     color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header nav li a {
+    padding: 0;
+    margin: 0 10px;
+    border-bottom: 2px solid transparent;
 }
 
 h1 {
