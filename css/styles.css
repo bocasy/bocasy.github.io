@@ -354,35 +354,35 @@ section h2::before {
 }
 
 /* ==================== ABOUT ==================== */
-.subsection {
+.aboutSubsection {
   border-bottom: 6px dotted var(--accent-color);
   padding-bottom: 20px;
   margin-bottom: 40px;
 }
 
-.subsection > p {
+.aboutSubsection > p {
   margin-left: var(--about-data-margin);
 }
 
-.subsection > ul {
+.aboutSubsection > ul {
     margin-left: var(--about-data-margin);
     list-style-type: square;
 }
 
-.subsection li {
+.aboutSubsection li {
     padding: 10px;
 }
 
-.subsection li::marker {
+.aboutSubsection li::marker {
     color: var(--accent-color);
 }
 
-.subsection h4 {
+.aboutSubsection h4 {
   margin-left: var(--about-data-margin);
   padding: 10px;
 }
 
-.subsection img {
+.aboutSubsection img {
   height: 300px;
   width: auto;
   border-radius: 30px;
@@ -390,7 +390,7 @@ section h2::before {
 }
 
 @media (max-width: 540px) {
-    .subsection img {
+    .aboutSubsection img {
         height: 150px;
     }
 }
