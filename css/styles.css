@@ -231,6 +231,7 @@ a {
     margin-bottom: 0;
 }
 
+
 .project-data {
     display: inline-block;
     padding: 20px;
@@ -250,6 +251,20 @@ a {
     max-width: 130%;
     width: auto;
     height: auto;
+}
+
+@media (max-width: 700px) {
+    .project-thumbnail {
+        position: unset;
+        width: 100%;
+    }
+    .project-data {
+        width: 100%;
+    }
+    .project-thumbnail img {
+        display:block;
+        margin:auto;
+    }
 }
 
 .tag-list {
@@ -281,12 +296,30 @@ a {
     margin-bottom: 40px;
 }
 
-content iframe {
-    display: block;
-    margin: auto;
+.isoImage {
+    max-width:100%;
+    max-height:100%;
+    height: auto;
+}
+
+.content-iframe-container {
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.content-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /* ==================== /PROJECT DESCRIPTION ==================== */
+
 .browse-all {
     display: block;
     margin-bottom: 30px;
@@ -343,6 +376,7 @@ section h2::before {
   border-radius: 30px;
   border: 6px dotted var(--accent-color);
 }
+
 @media (max-width: 540px) {
     .subsection img {
         height: 150px;
