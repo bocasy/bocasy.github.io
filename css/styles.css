@@ -302,14 +302,13 @@ a {
     height: auto;
 }
 
-.contentImg {
-    display: inline-block;
+.content a img {
     width: 300px;
     height: auto;
 }
 
 @media (max-width: 605px) {
-    .contentImg {
+    .content a img {
         display: block;
         margin: auto;
     }
