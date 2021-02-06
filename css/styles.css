@@ -22,13 +22,9 @@
     --text-color: #dad7cd;
   }
 }
-
 @media (max-width: 660px) {
     :root {
         --about-data-margin: 20px;
-    }
-    .wrapper {
-        padding: 40px 20px;
     }
 }
 
@@ -54,6 +50,12 @@ body {
     overflow: hidden;
 }
 
+@media (max-width: 660px) {
+    .wrapper {
+        padding: 0px;
+    }
+}
+
 .wrapper-centered {
     max-width: 900px;
     margin-left: auto;
@@ -63,6 +65,11 @@ body {
     overflow: hidden;
 }
 
+@media (max-width: 400px) {
+    .wrapper-centered {
+        padding: 0px;
+    }
+}
 
 header {
     background-color: var(--accent-color);
@@ -157,6 +164,14 @@ a {
 .iso-list a {
     text-decoration: none;
 }
+
+@media (max-width: 700px) {
+    .iso-list, .iso-list > li {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}\
 /* ==================== /ISO ==================== */
 
 /* ==================== CLIENTS ==================== */
@@ -327,6 +342,11 @@ section h2::before {
   width: auto;
   border-radius: 30px;
   border: 6px dotted var(--accent-color);
+}
+@media (max-width: 540px) {
+    .subsection img {
+        height: 150px;
+    }
 }
 /* ==================== /ABOUT ==================== */
 
