@@ -139,16 +139,27 @@ a {
     margin-bottom: 40px;
 }
 
+/* ==================== ISO ==================== */
 .iso-list {
-    list-style-type: none;
-    display: inline-table;
+    display: table;
+    border-collapse:separate;
+    border-spacing:10px;
 }
 
 .iso-list > li {
-    display: inline;
-    padding: 20px;
+    display: table-cell;
+    width: 30%;
+    padding: 0px 10px 10px 10px;
+    border-radius: 30px;
+    background-color: var(--card-background-color);
 }
 
+.iso-list a {
+    text-decoration: none;
+}
+/* ==================== /ISO ==================== */
+
+/* ==================== CLIENTS ==================== */
 .clients-list {
     list-style-type: none;
     display: inline-table;
@@ -174,16 +185,16 @@ a {
     filter: grayscale(100%);
     background-color: var(--card-background-color);
 }
+/* ==================== /CLIENTS ==================== */
 
-
+/* ==================== PROJECT ==================== */
 .project-list > li {
-    display: block;
-    padding: 20px;
     border-radius: 20px;
     background-color: var(--card-background-color);
     margin-bottom: 20px;
-    
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    overflow: hidden;
+    position: relative;
 }
 
 .project-list > li:hover {
@@ -205,8 +216,29 @@ a {
     margin-bottom: 0;
 }
 
+.project-data {
+    display: inline-block;
+    padding: 20px;
+    width: 70%;
+}
+
+.project-thumbnail {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.project-thumbnail img {
+    max-height: 100%;
+    max-width: 130%;
+    width: auto;
+    height: auto;
+}
+
 .tag-list {
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 .tag-list li,
@@ -227,11 +259,19 @@ a {
 .item-page .tag-list {
     display: inline-block;
 }
+/* ==================== /PROJECT ==================== */
 
+/* ==================== PROJECT DESCRIPTION ==================== */
 .content {
     margin-bottom: 40px;
 }
 
+content iframe {
+    display: block;
+    margin: auto;
+}
+
+/* ==================== /PROJECT DESCRIPTION ==================== */
 .browse-all {
     display: block;
     margin-bottom: 30px;
@@ -253,6 +293,7 @@ section h2::before {
   background-color: var(--accent-color);
 }
 
+/* ==================== ABOUT ==================== */
 .subsection {
   border-bottom: 6px dotted var(--accent-color);
   padding-bottom: 20px;
@@ -287,14 +328,11 @@ section h2::before {
   border-radius: 30px;
   border: 6px dotted var(--accent-color);
 }
-
+/* ==================== /ABOUT ==================== */
 
 footer {
     background-color: var(--card-background-color);
     color: var(--accent-color);
-}
-
-iframe {
-    display: block;
-    margin: auto;
+    border: solid;
+    border-color: var(--card-background-color);
 }
