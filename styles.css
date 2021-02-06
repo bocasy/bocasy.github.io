@@ -302,6 +302,19 @@ a {
     height: auto;
 }
 
+.contentImg {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+}
+
+@media (max-width: 605px) {
+    .contentImg {
+        display: block;
+        margin: auto;
+    }
+}
+
 .content-iframe-container {
     margin: 20px;
     position: relative;
