@@ -62,7 +62,6 @@ body {
     margin-right: auto;
     padding: 40px;
     text-align: center;
-    overflow: hidden;
 }
 
 @media (max-width: 400px) {
@@ -159,19 +158,20 @@ a {
     padding: 0px 10px 10px 10px;
     border-radius: 30px;
     background-color: var(--card-background-color);
+    overflow: hidden;
 }
 
 .iso-list a {
     text-decoration: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 870px) {
     .iso-list, .iso-list > li {
         display: block;
         width: 100%;
         margin-bottom: 20px;
     }
-}\
+}
 /* ==================== /ISO ==================== */
 
 /* ==================== CLIENTS ==================== */
