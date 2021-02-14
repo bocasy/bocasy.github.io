@@ -118,11 +118,24 @@ header nav li.selected {
     background-color: var(--background-color);
 }
 
+header nav li.search a {
+    background-color: var(--accent-color);
+    color: transparent !important;
+    -webkit-mask-image: url(images/search.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+}
+
+header nav li.selected.search a {
+    background-color: var(--text-color);
+}
+
 header nav li a {
     padding: 0;
     margin: 0 10px;
     border-bottom: 2px solid transparent;
 }
+
 
 h1 {
     margin-bottom: 20px;
@@ -345,7 +358,7 @@ a {
 
 .all-tags li {
     font-size: 1.4em;
-    margin-right: 10px;
+    margin: 10px 10px;
     padding: 6px 10px;
 }
 
