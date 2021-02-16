@@ -124,8 +124,8 @@ header nav li.search a {
     -webkit-mask-image: url(images/search.png);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
-    -webkit-mask-size: 105%;
-    padding: 1px;
+    -webkit-mask-size: 100%;
+    padding: 0px;
 }
 
 header nav li.selected.search a {
