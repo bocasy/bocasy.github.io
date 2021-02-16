@@ -121,11 +121,7 @@ header nav li.selected {
 header nav li.search a {
     background-color: var(--accent-color);
     color: transparent !important;
-    -webkit-mask-image: url(images/search.png);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center center;
-    -webkit-mask-size: 100%;
-    padding: 0px;
+    -webkit-mask-box-image: url(images/search.png);
 }
 
 header nav li.selected.search a {
